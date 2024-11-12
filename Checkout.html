@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+   <style>
+     /* final checkout */
+
+     .checkout-container {
+        width: 80%;
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .checkout-section {
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #444;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="month"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-top: 5px;
+    }
+    
+    input[type="text"]:focus,
+    input[type="month"]:focus {
+        outline: none;
+        border-color: #4CAF50;
+    }
+    
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        font-size: 1.1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    .order-summary {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 6px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .order-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+    .order-item span {
+        font-size: 1rem;
+    }
+    
+    .order-item.total {
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+        margin-top: 15px;
+    }
+
+   </style>
+</head>
+ 
+<body>
+    <header>
+        <div class="header-icons">
+            <a href="Cart.html"><img src="img/shopping_cart_25dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="shopping cart"></a>
+            <a href="signin.html"><img src="img/account_circle_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="personal account"></a>
+        </div>
+        <div>
+            <div class="header-logo">
+                <img src="img/Untitled (2).png" alt="logo" width="80px">
+            </div><br>
+            <button class="menu-toggle"><img src="img/arrow_drop_down_24dp_FFF_FILL0_wght400_GRAD0_opsz24.png" alt="" width="40px"></button>
+            <nav class="mega-menu">
+                <ul class="header-links">
+                    <li><a class="active" href="index.html">home</a></li>
+                    <li><a href="Menu.html">menu</a></li>
+                    <li><a href="contact.html">contact us</a></li>
+                    <li><a href="about us.html">about us</a></li>
+                    <li><a  href="faq.html">faq</a></li>
+                </ul>
+            </nav>
+        </div>
+        <br>
+    </header>
+    <div class="checkout-container">
+        <h1>Checkout</h1>
+
+        
+        <div class="checkout-section">
+            <h2>Delivery Address</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Email</label>
+                    <input type="text" id="zip" name="zip" placeholder="Enter postal code" required>
+                </div>
+            </form>
+        </div>
+
+                <div class="checkout-section">
+            <h2>Order Summary</h2>
+            <div class="order-summary">
+                <div class="order-item">
+                    <span>Item Total</span>
+                    <span>UGX ###</span>
+                </div>
+                <div class="order-item">
+                    <span>Delivery</span>
+                    <span>UGX ###</span>
+                </div>
+                <div class="order-item total">
+                    <span>Total</span>
+                    <span>UGX ###</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-section">
+            <h2>Payment Information</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="card-number">Phone</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9876 5432" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                </div>
+                <button type="submit" class="btn-submit">Complete Purchase</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="col-1">
+                <h3>
+                    <div class="footer-img">
+                        <img src="img/Untitled (2).png" alt="logo" width="15% ">
+                    </div>
+                </h3>
+                <div class="col1-p">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Officiis reprehenderit nesciunt expedita ipsa.<br> Deleniti quis corporis ducimus amet cupiditate facilis, <br>dolores illo molestias consequatur repellendus,<br> quam voluptates libero impedit error?</p>
+                </div>
+
+            </div>
+            
+            <div class="col-2">
+
+                <h3>links</h3>
+                <div class="para">
+                <p><a href="">home</a></p>
+                <p><a href="">menu</a></p>
+                <p><a href="">contact us</a></p>
+                <p><a href="">about us</a></p></div>
+            </div>
+            <div class="col-1">
+                <h3>Team</h3>
+                <div class="para">
+                <p>swaib</p>
+                <p>kelly</p>
+                <p>doreen</p>
+                <p>dorothy</p></div>
+            </div>
+            <div class="col-1">
+                <h3>news letter</h3>
+                <input type="text" name="" id="" placeholder="enter your email">
+                <button type="submit">subscribe</button>
+                <div class="social">
+                    <img src="img/facebook-brands-solid (1).svg" alt="">
+                    <img src="img/instagram-brands-solid.svg" alt="">
+                    <img src="img/skype-brands-solid (1).svg" alt="">
+                    <img src="img/twitter-brands-solid.svg" alt="">
+                    <img src="img/google-plus-g-brands-solid.svg" alt="">
+                </div>
+
+            </div>
+        </div>    
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const menu = document.querySelector('.mega-menu');
+            menu.classList.toggle('active');
+        });
+    </script>
+    
+</body>
+
+</html>
+
